@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      redirect_to current_user, notice: 'メッセージを編集しました'
+      flash[:info] = "メッセージを編集しました"
+      redirect_to current_user
     else
       render 'edit'
     end
