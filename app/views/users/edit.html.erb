@@ -1,0 +1,125 @@
+<style type="text/css">
+  
+li #user {
+  font-size: 25px;
+}
+
+
+li #user span {
+  font-size: 15px;
+}
+
+
+li {
+  list-style: none;;
+  color: #000;
+}
+
+.col-md-3 li.current{
+    color:#038ed4;
+}
+
+.col-md-3 li a{ 
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  
+
+}
+
+.col-md-3 li a:hover{ 
+  color: #038ed4;
+  
+
+}
+
+
+
+</style>
+
+
+
+
+<div class="container">
+    
+  <% if notice %>
+    <div class="alert alert-info">
+        <%= notice %>
+    </div>
+  <% end %>
+  <h1><%= gravatar_for @user %></h1>
+    
+
+  <ul>
+    <li class="col-md-3">
+      <div class="panel panel-default">
+        <ul class="list-group">
+          
+          <li class="list-group-item current"><a href="#">ユーザー情報</a></li>
+          <li class="list-group-item"><a href="#">セキュリティーとプライバシー</a></li>
+          <li class="list-group-item"><a href="#">パスワード</a></li>
+          <li class="list-group-item"><a href="#">クレジットカードとお届け先</a></li>
+          <li class="list-group-item"><a href="#">注文履歴</a></li>
+          <li class="list-group-item"><a href="#">モバイル</a></li>
+          <li class="list-group-item"><a href="#">メール通知</a></li>
+          <li class="list-group-item"><a href="#">Web通知</a></li>
+          <li class="list-group-item"><a href="#">友達を見つける</a></li>
+          <li class="list-group-item"><a href="#">ミュートしているアカウント</a></li>
+          <li class="list-group-item"><a href="#">ブロックしたアカウント</a></li>
+          <li class="list-group-item"><a href="#">デザイン</a></li>
+          <li class="list-group-item"><a href="#">アプリ連携</a></li>
+          <li class="list-group-item"><a href="#">ウィジェット</a></li>
+          <li class="list-group-item"><a href="#">Twitterデータ</a></li>
+          
+        </ul>
+    </div>
+  </li>
+
+
+  <li class="col-md-9">
+    
+      <%= form_for(@user) do |f| %>
+        <% if @user.errors.present? %>
+          <div class="alert alert-danger">
+            <%= alert %>
+             <ul>
+               <% @user.errors.full_messages.each do |full_message| %>
+                 <li>
+                  <%= full_message %>
+                 </li>
+               <% end %> 
+             </ul>
+           </div>
+         <% end %>
+   <div class="panel panel-default">     
+    <ul class="list-group">
+      <li class="list-group-item" id="user">ユーザー情報<br /><span>アカウント情報と言語設定を変更します</span></li>  
+      
+      <li class="list-group-item">
+        <form class="form-horizontal">
+            
+          <div class="form-group">
+            <label for="inputName3" class="col-sm-3 control-label">ユーザー名</label>
+              <div class="col-sm-9">
+                <%= f.text_field :name %>
+              </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-3 control-label">メールアドレス</label>
+              <div class="col-sm-9"> 
+                <%= f.text_field :email %>
+              </div>
+           </div>
+     
+      <%= f.submit class: "btn btn-sm btn-primary" %>
+    
+       </form>
+      </li>
+     </ul>
+     </div>
+    <% end %>        
+   
+  </li>
+ </ul>
+</div>
