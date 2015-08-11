@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150810002051) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+end
 
 ActiveRecord::Schema.define(version: 20150809131224) do
 
@@ -50,4 +51,4 @@ ActiveRecord::Schema.define(version: 20150809131224) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
-end
+
