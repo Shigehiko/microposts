@@ -43,6 +43,7 @@ class UsersController < ApplicationController
     @title = "Followings"
     @user = User.find(params[:id])
     @users = @user.following_users
+    @microposts = @user.microposts
     render :file => "users/show_follow"
   end
 
@@ -50,6 +51,7 @@ class UsersController < ApplicationController
     @title = "Followers"
     @user = User.find(params[:id])
     @users = @user.follower_users
+    @microposts = @user.microposts
     render :file => "users/show_follow"
   end
   
