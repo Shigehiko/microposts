@@ -6,6 +6,7 @@ class UsersController < ApplicationController
    @microposts = @user.microposts
   end
   
+
   
   def edit
 
@@ -21,7 +22,8 @@ class UsersController < ApplicationController
   end
   
   
-   def new
+ 
+  def new
     @user = User.new
   end
 
@@ -35,6 +37,22 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  
+  
+  def followings
+    @title = "Followings"
+    @user = User.find(params[:id])
+    @users = @user.following_users
+    render :file => "users/show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.follower_users
+    render :file => "users/show_follow"
+  end
+  
 
 
   private
