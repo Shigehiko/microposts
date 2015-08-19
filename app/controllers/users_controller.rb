@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   
   def edit
-
   end
   
   def update
@@ -38,12 +37,12 @@ class UsersController < ApplicationController
     end
   end
   
-  
+ 
   def followings
     @title = "Followings"
     @user = User.find(params[:id])
-    @users = @user.following_users
     @microposts = @user.microposts
+    @users = @user.following_users
     render :file => "users/show_follow"
   end
 

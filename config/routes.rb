@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     member do get :followings, :followers
   end
 end
-
+scope "(:locale)" do
+  resources :products
+end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]

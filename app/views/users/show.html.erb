@@ -1,17 +1,12 @@
+
 <style type="text/css">
-  
-
-
-li #user span {
-  font-size:25px;
-}
-
-
 li {
   list-style: none;
 }
 
-
+li #user span {
+  font-size:25px;
+}
 
 .col-md-3 li a{ 
   color: #000;
@@ -21,25 +16,16 @@ li {
 
 .col-md-3 li a:hover{ 
   color: #038ed4;
-  
-
 }
 
-
-
 </style>
+
 <div class="container">
   
-    
-
-    <ul>
+  <ul>
     <li class="col-md-3">
-    <div class="panel panel-default">
-    
-      
-        
+      <div class="panel panel-default">
         <ul class="list-group">
-          
           <li class="list-group-item"><a href="#">ユーザー情報</a></li>
           <li class="list-group-item"><a href="#">セキュリティーとプライバシー</a></li>
           <li class="list-group-item"><a href="#">パスワード</a></li>
@@ -56,61 +42,42 @@ li {
           <li class="list-group-item"><a href="#">ウィジェット</a></li>
           <li class="list-group-item"><a href="#">Twitterデータ</a></li>
         </ul>
+      <div>
+    </li>
 
-       
-     
-    <div>
-  </li>
-
-  
-<li class="col-md-9">
-
-  <div class="panel panel-default">
-    <ul class="list-group">
-
-      <li class="list-group-item" id="user"><span>ユーザー情報</span>
-      <br />アカウント情報と言語設定を変更します(<%= link_to "edit" , edit_user_path %>)</li>  
+    <li class="col-md-9">
+      <div class="panel panel-default">
+        <ul class="list-group">
+          <li class="list-group-item" id="user"><span>ユーザー情報</span>
+            <br />アカウント情報と言語設定を変更します(<%= link_to "edit" , edit_user_path %>)
+          </li>  
       
-     
-  
-  
- 
+          <li class="list-group-item">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputName3" class="col-sm-2 control-label">ユーザー名</label>
+                  <div class="col-sm-10">
+                   <%= @user.name %>
+                  </div>
+                </div>
+              
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">メールアドレス</label>
+                  <div class="col-sm-10"> 
+                    <%= @user.email %>
+                  </div>
+              </div>
 
-
-
- <li class="list-group-item">
-<form class="form-horizontal">
-  <div class="form-group">
-    <label for="inputName3" class="col-sm-2 control-label">ユーザー名</label>
-    <div class="col-sm-10">
-     <%= @user.name %>
-    
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">メールアドレス</label>
-    <div class="col-sm-10"> 
-      <%= @user.email %>
-    </div>
-  </div>
-
-   <div class="form-group">
-    <label for="inputcountry3" class="col-sm-2 control-label">地域</label>
-    <div class="col-sm-10">
-     <%= @user.area %>
-    </div>
-  </div>
-
-  
-</form>
-      </li>
-      </ul>
-        
+              <div class="form-group">
+                <label for="inputcountry3" class="col-sm-2 control-label">地域</label>
+                  <div class="col-sm-10">
+                   <%= @user.area %>
+                  </div>
+              </div>
+            </form>
+          </li>
+        </ul>
       </div>
-     </li>
-
-    </ul>
-
-
+    </li>
+  </ul>
 </div>
