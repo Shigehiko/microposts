@@ -2,11 +2,14 @@ class UsersController < ApplicationController
   before_action :show, only: [:edit, :update]
   
   def show 
-   @user = User.find(params[:id])
-   @microposts = @user.microposts
+  @user = User.find(params[:id])
+  @microposts = @user.microposts
+  # @microposts = @user.microposts.paginate(page: params[:page])
   end
   
-
+  def profile
+    @user = User.find(params[:id])
+  end
   
   def edit
   end
@@ -44,6 +47,7 @@ class UsersController < ApplicationController
     @microposts = @user.microposts
     @users = @user.following_users
     render :file => "users/show_follow"
+    
   end
 
   def followers

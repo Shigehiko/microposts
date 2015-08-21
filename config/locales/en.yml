@@ -22,7 +22,35 @@
 ---
 
 en:
-  MicropostFeed_html: '<h3>Micropost Feed</h3>'
+  MicropostFeed: "Micropost Feed"
+  followings: "followings"
+  followers: "followers"
+  Post: "Post"
+  view my profile: "view my profile"
+  micropost: "micropost"
+  delete: "Delete"
+  Posted: "Posted"
+  ago: "ago"
+  Account: "Account"
+  Security and privacy: "Security and privacy"
+  Password: "Password"
+  Cards and shipping: "Cards and shipping"
+  Order history: "Order history"
+  Mobile: "Mobile"
+  Email notifications: "Email notifications"
+  Web notifications: "Web notifications"
+  Find friends: "Find friends"
+  Muted accounts: "Muted accounts"
+  Blocked accounts: "Blocked accounts"
+  Design: "Design"
+  Apps: "Apps"
+  Widgets: "Widgets"
+  Your Twitter data: "Your Twitter data"
+  Change your basic account and language settings: "Change your basic account and language settings"
+  Username: "Username"
+  Email: "Email"
+  Area: "Area"
+  
   date:
     abbr_day_names:
     - Sun
@@ -226,6 +254,7 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
-
+ 
+ 
   
   

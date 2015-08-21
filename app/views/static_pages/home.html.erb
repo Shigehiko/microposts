@@ -4,18 +4,15 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      <section>
-         <%= render 'shared/stats' %>
-      </section>
+      
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
     <div class="col-md-8">
-       <%= t :MicropostFeed_html %>
-        
-      
-      <%= render 'shared/feed' %>
+       <h3><%= t :MicropostFeed %></h3>
+        <%= render 'shared/feed' %>
+         <%= paginate(@users) %>
     </div>
   </div>
 <% else %>
@@ -24,4 +21,5 @@
 
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-<% end %>
+    <% end %>
+ 

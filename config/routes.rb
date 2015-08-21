@@ -5,17 +5,14 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-
-  resources :users  ,  except: [:index, :new]
-  resources :users
-  resources :users do 
-    member do get :followings, :followers
-  end
-end
 scope "(:locale)" do
-  resources :products
-end
+  resources :users, except: [:index, :new] do
+    member do
+      get :followings, :followers, :profile
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
+end
 end

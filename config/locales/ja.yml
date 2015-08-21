@@ -1,5 +1,33 @@
 ja:
-  MicropostFeed_html: '<h3>マイクロポストフィード</h3>'
+  MicropostFeed: "マイクロポストフィード"
+  followings: "フォロー"
+  followers: "フォロワー"
+  Post: "ポスト"
+  view my profile: "プロフィール"
+  micropost: "ポスト総数"
+  delete: "削除"
+  Posted: "投稿"
+  ago: "前"
+  Account: "ユーザー情報"
+  Security and privacy: "セキュリティーとプライバシー"
+  Password: "パスワード"
+  Cards and shipping: "クレジットカードとお届け先"
+  Order history: "注文履歴"
+  Mobile: "モバイル"
+  Email notifications: "メール通知"
+  Web notifications: "Web通知"
+  Find friends: "友達を見つける"
+  Muted accounts: "ミュートしているアカウント"
+  Blocked accounts: "ブロックしたアカウント"
+  Design: "デザインn"
+  Apps: "アプリ連携"
+  Widgets: "ウィジェト"
+  Your Twitter data: "Twitterデータ"
+  Change your basic account and language settings: "アカウント情報と言語設定を変更します"
+  Username: "ユーザー名"
+  Email: "メールアドレス"
+  Area: "地域"
+  
   date:
     abbr_day_names:
     - 日
@@ -193,3 +221,4 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
+  

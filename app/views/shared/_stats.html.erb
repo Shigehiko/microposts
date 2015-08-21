@@ -1,15 +1,17 @@
 <% @user ||= current_user %>
 <div class="stats">
-   <%= link_to 'followings', followings_user_path(@user) %>
+    <div class = "btn btn-default">
+    <%= link_to 'followings', followings_user_path(@user), {:style => 'color:#000;text-decoration:none;'} %>
         <strong id="followings" class="stat">
             <%= @user.following_users.count %>
         </strong>
-       
+    </div>   
     
-     <%= link_to 'followers', followers_user_path(@user) %>
+    <div class = "btn btn-default">
+    <%= link_to 'followers', followers_user_path(@user), {:style => 'color:#000;text-decoration:none;'} %>
         <strong id="followers" class="stat">
             <%= @user.follower_users.count %>
         </strong>
-       
+     </div>   
 </div>
 
