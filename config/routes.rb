@@ -12,6 +12,7 @@ scope "(:locale)" do
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
+  resources :projects, only: [:index]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
 end
