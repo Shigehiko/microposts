@@ -3,7 +3,7 @@
   <div class="panel-body">
    <%= link_to gravatar_for(@user, size: 50), @user %>
      <h1><%= @user.name %></h1>
-      <span><%= link_to I18n.t("views.common.view my profile"), profile_user_path(current_user) %></span>
+      <span><%= link_to I18n.t("views.common.view my settings"), profile_user_path(current_user) %></span>
         <span><%= link_to pluralize(@user.microposts.count, "micropost"), current_user %></span>
     
          <%= render 'shared/stats' %>
