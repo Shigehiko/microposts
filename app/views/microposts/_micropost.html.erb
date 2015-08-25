@@ -3,9 +3,9 @@
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content"><%= micropost.content %></span>
   <span class="timestamp">
-     <%= I18n.t "Posted" %> <%= time_ago_in_words(micropost.created_at) %> <%= I18n.t "ago" %>. 
+     <%= I18n.t ("views.common.Posted") %> <%= time_ago_in_words(micropost.created_at) %> <%= I18n.t ("views.common.ago") %>. 
     <% if current_user == micropost.user %>
-      <%= link_to "delete", micropost, method: :delete,
+      <%= link_to I18n.t("views.common.Delete"), micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>

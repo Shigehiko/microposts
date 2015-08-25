@@ -3,21 +3,21 @@ class UsersController < ApplicationController
   
   def show 
   @user = User.find(params[:id])
-  @microposts = @user.microposts
-  # @microposts = @user.microposts.paginate(page: params[:page])
+  @microposts = @user.microposts.order(created_at: :desc)
   end
   
   def profile
     @user = User.find(params[:id])
   end
   
+  
   def edit
   end
   
   def update
     if @user.update(user_params)
-      flash[:info] = "メッセージを編集しました"
-      redirect_to current_user
+      flash[:info] = I18n.t("controllers.common.Updated profile")
+      redirect_to profile_user_path(current_user)
     else
       render 'edit'
     end
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-       flash[:success] = "Welcome to the Sample App!"
+       flash[:success] = I18n.t("controllers.common.Welcome to the Microposts")
        redirect_to @user
     else
       render 'new'

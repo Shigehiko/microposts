@@ -14,13 +14,19 @@
   </aside>
   
   <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-      <% if @user.microposts.any? %>
-        <h3><%= I18n.t "MicropostFeed" %>(<%= @user.microposts.count %>)</h3>
-          <ol class="microposts">
-            <%= render @microposts %>
-          </ol>
-      <% end %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= render 'follow_form' if logged_in? %>
+          <% if @user.microposts.any? %>
+            <h3><%= I18n.t ("views.common.MicropostFeed") %>(<%= @user.microposts.count %>)</h3>
+              <ol class="microposts">
+                
+                  <%= render @microposts %>
+                  
+              </ol>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
