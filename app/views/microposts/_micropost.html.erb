@@ -6,7 +6,7 @@
      <%= I18n.t ("views.common.Posted") %> <%= time_ago_in_words(micropost.created_at) %> <%= I18n.t ("views.common.ago") %>. 
     <% if current_user == micropost.user %>
       <%= link_to I18n.t("views.common.Delete"), micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+                                       data: { confirm: I18n.t("views.common.You sure?") } %>
     <% end %>
   </span>
 </li>

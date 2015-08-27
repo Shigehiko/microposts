@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 scope "(:locale)" do
   resources :users, except: [:index, :new] do
     member do
-      get :followings, :followers, :profile
+      get :followings, :followers, :settings
     end
   end
   resources :sessions, only: [:new, :create, :destroy]

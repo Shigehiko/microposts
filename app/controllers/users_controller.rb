@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   @microposts = @user.microposts.order(created_at: :desc)
   end
   
-  def profile
+  def settings
     @user = User.find(params[:id])
   end
   
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:info] = I18n.t("controllers.common.Updated profile")
-      redirect_to profile_user_path(current_user)
+      redirect_to settings_user_path(current_user)
     else
       render 'edit'
     end

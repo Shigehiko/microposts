@@ -70,12 +70,15 @@ en:
       view my profile: "view my profile"
       Follow: "Follow"
       Unfollow: "Unfollow"
+      You sure?: "You sure?"
+      What's happening?: "What's happening?"
   controllers:
     common:
       Micropost created!: "Micropost created!"
       Micropost deleted!: "Micropost deleted!"
       Updated profile: "Updated profile"
       Welcome to the Microposts: "Welcome to the Microposts"
+      
         
       
   

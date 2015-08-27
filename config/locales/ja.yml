@@ -47,12 +47,15 @@ ja:
       view my profile: "プロフィールを見る"
       Follow: "フォロー"
       Unfollow: "アンフォロー"
+      You sure?: "本当に削除しますか？"
+      What's happening?: "いまどうしてる？"
   controllers:
     common:
       Micropost created!: "マイクロポストを作成しました！"
       Micropost deleted!: "マイクロポストを削除しました！"
       Updated profile: "プロフィールを更新しました"
       Welcome to the Microposts: "ようこそマイクロポストへ！"
+      
   
   
   date:
